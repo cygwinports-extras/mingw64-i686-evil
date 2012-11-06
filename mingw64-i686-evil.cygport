@@ -1,0 +1,15 @@
+CROSS_HOST="i686-w64-mingw32"
+inherit cross
+
+NAME="mingw64-i686-evil"
+VERSION=1.7.0
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="Enlightenment Win32 support library"
+
+HOMEPAGE="http://www.enlightenment.org/"
+SRC_URI="http://download.enlightenment.org/releases/evil-${VERSION}.tar.bz2"
+SRC_DIR="evil-${VERSION}"
+PATCH_URI="01-parallel-make.patch"
+
+KEEP_LA_FILES="none"

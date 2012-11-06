@@ -1,0 +1,11 @@
+--- origsrc/evil-1.7.0/src/lib/Makefile.am	2012-08-20 18:01:42.000000000 -0500
++++ src/evil-1.7.0/src/lib/Makefile.am	2012-09-11 14:58:22.908006700 -0500
+@@ -115,7 +115,7 @@ libdl_la_SOURCES = dlfcn.c
+ 
+ libdl_la_CPPFLAGS = @win32_cppflags@ -DEFL_EVIL_DLFCN_BUILD -DPSAPI_VERSION=1
+ libdl_la_CFLAGS = @win32_cflags@
+-libdl_la_LIBADD = $(top_builddir)/src/lib/libevil.la $(EFL_MPATROL_LIBS) @win32_dl_libs@
++libdl_la_LIBADD = libevil.la $(EFL_MPATROL_LIBS) @win32_dl_libs@
+ libdl_la_LDFLAGS = -no-undefined -Wl,--enable-auto-import -version-info @version_info@
+ 
+ EXTRA_DIST = gdtoa/README gdtoa/README.mingw
